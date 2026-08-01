@@ -1,0 +1,350 @@
+/* =========================================
+   Wish3 Display Page Specific Styles
+   ========================================= */
+
+/* Gift Box Screen */
+.gift{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    cursor: pointer;
+    text-align: center;
+    animation: bounce 2s infinite;
+    webkit-text-fill-color: pink;
+}
+
+.gift p{
+    color: pink;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.gift-box {
+  font-size: 110px;
+  animation: pulse-gift 1.8s infinite ease-in-out;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+}
+//2
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.background span{
+    position:absolute;
+    display:block;
+    width:25px;
+    height:25px;
+    background:rgba(255,255,255,0.3);
+    border-radius:50%;
+    animation:float 15s linear infinite;
+    bottom:-150px;
+}
+
+.background span:nth-child(1){left:5%;width:40px;height:40px;animation-duration:12s;}
+.background span:nth-child(2){left:15%;animation-duration:18s;}
+.background span:nth-child(3){left:30%;width:50px;height:50px;animation-duration:15s;}
+.background span:nth-child(4){left:45%;animation-duration:20s;}
+.background span:nth-child(5){left:60%;width:35px;height:35px;animation-duration:14s;}
+.background span:nth-child(6){left:70%;animation-duration:16s;}
+.background span:nth-child(7){left:80%;width:45px;height:45px;animation-duration:13s;}
+.background span:nth-child(8){left:90%;animation-duration:18s;}
+.background span:nth-child(9){left:55%;width:30px;height:30px;animation-duration:17s;}
+.background span:nth-child(10){left:25%;width:55px;height:55px;animation-duration:22s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+.tap-hint {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 500;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@keyframes pulse-gift {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Beautiful Wish Card */
+.card {
+  display: none;
+  background: #ffffff;
+  color: #333333; /* Dark text for contrast against white card */
+  padding: 35px 30px;
+  border-radius: 24px;
+  text-align: center;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: cardAppear 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: scale(0.6) translateY(30px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Typography inside Card */
+.card h1#title {
+  font-size: 2.2rem;
+  color: #ff3366;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card h2#receiver {
+  font-size: 1.5rem;
+  color: #2575fc;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.message-wrapper {
+  background: #f8f9fa;
+  border-left: 4px solid #ff3366;
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin: 15px 0 25px 0;
+}
+
+.card p#message {
+  font-size: 1.15rem;
+  color: #444444;
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.card h3#sender {
+  font-size: 1.2rem;
+  color: #ff3366;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Action Button */
+.card .btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white !important;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card .btn:hover {
+  transform: translateY(-3deg) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.6);
+}
+
+//3
+.background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+/* Balloons */
+
+.balloon{
+position:absolute;
+bottom:-150px;
+width:70px;
+height:90px;
+border-radius:50%;
+animation:floatUp 12s linear infinite;
+}
+
+.b1{left:5%;background:#ff4d6d;animation-delay:0s;}
+.b2{left:25%;background:#4dabf7;animation-delay:2s;}
+.b3{left:45%;background:#51cf66;animation-delay:4s;}
+.b4{left:65%;background:#ffd43b;animation-delay:6s;}
+.b5{left:85%;background:#da77f2;animation-delay:8s;}
+
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:80px;
+background:white;
+left:50%;
+top:90px;
+}
+
+/* Hearts */
+
+.heart{
+position:absolute;
+bottom:-50px;
+font-size:35px;
+color:#ff3366;
+animation:floatHeart 10s linear infinite;
+}
+
+.h1{left:15%;animation-delay:1s;}
+.h2{left:55%;animation-delay:5s;}
+.h3{left:80%;animation-delay:8s;}
+
+/* Stars */
+
+.star{
+position:absolute;
+font-size:28px;
+animation:twinkle 2s infinite alternate;
+}
+
+.s1{top:10%;left:15%;}
+.s2{top:20%;left:70%;}
+.s3{top:60%;left:40%;}
+.s4{top:80%;left:85%;}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-130vh);
+}
+}
+
+@keyframes floatHeart{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+@keyframes twinkle{
+from{
+opacity:.3;
+transform:scale(1);
+}
+to{
+opacity:1;
+transform:scale(1.5);
+}
+}
+//4
+#galaxy{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-2;
+    background:linear-gradient(180deg,#020111,#191970,#4b0082);
+}
+
+.gift{
+    z-index:10;
+}
+
+.card{
+    z-index:10;
+}
+/* Premium Animated Background */
+
+body{
+    margin:0;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#6a11cb);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.animated-bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-10;
+}
+
+.stars,
+.stars2,
+.stars3{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-repeat:repeat;
+}
+
+.stars{
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:60px 60px;
+    animation:moveStars 60s linear infinite;
+    opacity:.8;
+}
+
+.stars2{
+    background-image:
+    radial-gradient(#FFD700 2px, transparent 2px);
+    background-size:120px 120px;
+    animation:moveStars 90s linear infinite;
+    opacity:.6;
+}
+
+.stars3{
+    background-image:
+    radial-gradient(#00FFFF 1.5px, transparent 1.5px);
+    background-size:90px 90px;
+    animation:moveStars 120s linear infinite;
+    opacity:.5;
+}
+
+@keyframes moveStars{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-1000px);
+    }
+}

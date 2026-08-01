@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Wish</title>
+
+<link rel="stylesheet" href="Wishstyle2.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Create Your Wish 🎉</h1>
+
+<select id="occasion">
+
+<option value="Birthday">🎂 Birthday</option>
+
+<option value="Anniversary">💍 Anniversary</option>
+
+<option value="Festival">🎉 Festival</option>
+
+<option value="Congratulations">🎓 Congratulations</option>
+
+<b><option value="Custom">(:Custom</option>
+</b>
+</select>
+
+<input
+type="text"
+id="receiver"
+placeholder="Receiver Name">
+
+<input
+type="text"
+id="sender"
+placeholder="Your Name">
+
+<textarea
+id="message"
+placeholder="Write your message"></textarea>
+
+<button onclick="generateWish()">
+
+Generate Wish
+
+</button>
+
+<div id="output"></div>
+
+<div id="qrcode"></div>
+
+<button
+id="copyBtn"
+onclick="copyLink()">
+
+Copy Link
+
+</button>
+
+<button
+id="shareBtn"
+onclick="shareWhatsApp()">
+
+Share WhatsApp
+
+</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script src="Wishscript.js"></script>
+
+</body>
+</html>
