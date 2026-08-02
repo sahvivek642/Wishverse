@@ -23,7 +23,7 @@ function generateWish() {
 
   generatedLink =
     basePath +
-    "Wish3.html?occasion=" + encodeURIComponent(occasion) +
+    "view.html?occasion=" + encodeURIComponent(occasion) +
     "&receiver=" + encodeURIComponent(receiver) +
     "&sender=" + encodeURIComponent(sender) +
     "&message=" + encodeURIComponent(finalMessage);
